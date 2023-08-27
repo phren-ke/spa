@@ -1,13 +1,17 @@
-import { Card, CardContent } from '@mui/material';
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { services } from '../utils/services';
+import { CustomCard } from './CustomCard';
 
 export const Home = () => {
     return (
-        <Link to="/Login">
-            <Card>
-                <CardContent>Home</CardContent>
-            </Card>
-        </Link>
+        <>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+                {services.map((service, index) => {
+                    return (
+                        <CustomCard key={index} {...service}></CustomCard>
+                    )
+                })}
+            </div>
+        </>
     )
 }
