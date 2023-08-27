@@ -32,15 +32,16 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .footer {
   background-color: #1976d2;
-  position: fixed;
   width: 100%;
   bottom: 0;
   color: white;
   font-size: 25px;
- }
+}
