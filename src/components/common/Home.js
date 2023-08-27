@@ -1,12 +1,10 @@
 import React from 'react';
 import { services } from '../utils/services';
 import { CustomCard } from './CustomCard';
-import { Card, CardContent, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
-import { Link } from 'react-router-dom';
 import { carousel } from '../utils/carousel';
 import { makeStyles } from '@mui/styles';
-import { carousel } from '../utils/carousel';
 
 const useStyles = makeStyles({
     carouselItem: {
@@ -49,6 +47,27 @@ const useStyles = makeStyles({
     carouselButton: {
         marginTop: '5px',
         color: '#1976d2 !important'
+    },
+    container: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(345px, 1fr))',
+        gap: 5,
+        margin: 1
+    },
+    card: {
+        maxWidth: 345,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+        '@media (max-width: 600px)': {
+            maxWidth: '100% !important',
+        },
+    },
+    media: {
+        height: 194,
+        width: '100%',
+        objectFit: 'cover',
     }
 });
 
@@ -79,7 +98,7 @@ export const Home = () => {
                     </div>
                 ))}
             </Carousel>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+            <div className={classes.container}>
                 {services.map((service, index) => {
                     return (
                         <CustomCard key={index} {...service}></CustomCard>
