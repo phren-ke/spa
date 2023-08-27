@@ -2,6 +2,8 @@ import React from 'react';
 import spa_one from "../assets/spa-2.jpg";
 import { makeStyles } from '@mui/styles';
 import { Button, Grid, Typography, Box } from '@mui/material';
+import Carousel from 'react-material-ui-carousel';
+import { carousel } from "../utils/carousel";
 
 const useStyles = makeStyles({
     heroSection: {
@@ -12,7 +14,6 @@ const useStyles = makeStyles({
         height: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
         justifyContent: 'center',
         padding: 6
     },
@@ -20,6 +21,7 @@ const useStyles = makeStyles({
         color: 'white',
         fontSize: '3.5rem !important',
         marginBottom: 2,
+        marginTop: "300px",
         '@media (min-width:600px)': {
             fontSize: '5rem'
         },
@@ -30,6 +32,7 @@ const useStyles = makeStyles({
         marginBottom: 2,
         color: 'white !important',
         borderColor: 'white',
+        borderRadius: 20,
         '&:hover': {
             backgroundColor: '#1976d2 !important'
         }
@@ -39,24 +42,90 @@ const useStyles = makeStyles({
         flexDirection: 'column',
         gap: '1rem',
         width: '100%'
+    },
+    carouselItem: {
+        position: 'relative',
+        overflow: 'hidden',
+    },
+    carouselImage: {
+        width: '100%',
+        height: '550px',
+        objectFit: 'cover',
+        position: 'relative',
+        filter: 'blur(2px)',
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1))',
+            zIndex: 1,
+        }
+    },
+    carouselTextContainer: {
+        position: 'absolute',
+        top: '50%',
+        left: '10%',
+        transform: 'translateY(-50%)',
+        textAlign: 'center',
+        width: '80%',
+        zIndex: 2
+    },
+    carouselText: {
+        color: '#1976d2',
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        display: 'block',
+        marginBottom: '5px'
+    },
+    carouselButton: {
+        marginTop: '5px',
+        color: '#1976d2 !important'
     }
 });
 
 export const Home = () => {
     const classes = useStyles();
     return (
-        <Grid container className={classes.heroSection}>
-            <Grid item xs={12} md={6}>
-                <Typography className={classes.heading}>
-                    {`Relax, Rejuvenate, Refresh`}
-                </Typography>
-                <Box className={classes.buttonContainer}>
-                    <Button variant='outlined' className={classes.button}>{`Schedule Appointment`}</Button>
-                    <Button variant='outlined' className={classes.button}>{`Book a Last Minute Appointment`}</Button>
-                    <Button variant='outlined' className={classes.button}>{`Purchase a Gift Card`}</Button>
-                </Box>
+        <>
+            <Grid container className={classes.heroSection}>
+                <Grid item xs={12} md={6}>
+                    <Typography className={classes.heading}>
+                        {`Relax, Rejuvenate, Refresh`}
+                    </Typography>
+                    <Box className={classes.buttonContainer}>
+                        <Button variant='outlined' className={classes.button}>{`Schedule Appointment`}</Button>
+                        <Button variant='outlined' className={classes.button}>{`Book a Last Minute Appointment`}</Button>
+                        <Button variant='outlined' className={classes.button}>{`Purchase a Gift Card`}</Button>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6}></Grid>
             </Grid>
-            <Grid item xs={12} md={6}></Grid>
-        </Grid>
+            <Carousel>
+                {carousel.map((item, index) => (
+                    <div key={index} className={classes.carouselItem}>
+                        <img
+                            className={classes.carouselImage}
+                            src={item.imageUrl}
+                            alt={item.description}
+                        />
+                        <div className={classes.carouselTextContainer}>
+                            <span className={classes.carouselText}>
+                                {item.description}
+                            </span>
+                            <Button
+                                variant="outlined"
+                                color="primary"
+                                className={classes.carouselButton}
+                            >
+                                Book Now
+                            </Button>
+                        </div>
+                    </div>
+                ))}
+            </Carousel>
+        </>
     )
 }
