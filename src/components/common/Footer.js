@@ -57,7 +57,7 @@ export const Footer = () => {
                         </Grid>
                     </Grid>
                 </Toolbar>
-                <Typography variant="body2">{`Copyright © ${new Date().getFullYear()} Maina Mwangiy`}</Typography>
+                <Typography variant="body2">{`Copyright © ${new Date().getFullYear()} Phren Inc`}</Typography>
             </Box>
         </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import spa_one from "../assets/spa-1.jpg";
+import spa_one from "../assets/spa-2.jpg";
 import { makeStyles } from '@mui/styles';
 import { Button, Grid, Typography, Box } from '@mui/material';
 
