@@ -1,5 +1,6 @@
 import { Button, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     card: {
@@ -13,6 +14,19 @@ const useStyles = makeStyles({
         height: 194,
         width: '100%',
         objectFit: 'cover',
+    },
+    cardContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        gap: 2
+    },
+    button: {
+        marginTop: 1
+    },
+    seeServiceButton: {
+        marginTop: 1,
+        color: '#1976d2 !important'
     }
 })
 
@@ -28,11 +42,12 @@ export const CustomCard = (props) => {
                 image={imageUrl}
                 alt={title}
             />
-            <CardContent>
+            <CardContent className={classes.cardContent}>
                 <Typography variant="body2" color="text.secondary">
                     {description}
                 </Typography>
-                <Button variant="outlined">{`Book Appointment Now`}</Button>
+                <Button component={Link} to={`/service/${props.id}`} className={classes.seeServiceButton}>{`See Service >`}</Button>
+                <Button variant="outlined" className={classes.button}>{`Book Appointment Now`}</Button>
             </CardContent>
         </Card>
     )
