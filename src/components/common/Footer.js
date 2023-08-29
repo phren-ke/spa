@@ -23,7 +23,7 @@ export const Footer = () => {
                                     {"Products"}
                                 </Button>
                             </Link>
-                            <Link variant="body2" to="/Pricing" style={{ textDecoration: 'none' }}>
+                            <Link variant="body2" to="/Services" style={{ textDecoration: 'none' }}>
                                 <Button
                                     sx={{ color: 'white', }}
                                 >
