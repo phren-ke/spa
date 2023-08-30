@@ -84,7 +84,7 @@ const Service = () => {
                     <span>{service.massage.price}</span>
                 </div>
             </div>
-            <Button variant="contained" color="primary" className={classes.reservationButton}>
+            <Button variant="outlined" color="primary" className={classes.reservationButton}>
                 Reserve Now
             </Button>
         </div>

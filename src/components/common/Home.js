@@ -21,11 +21,12 @@ const useStyles = makeStyles({
     },
     heading: {
         color: 'white',
-        fontSize: '3.5rem !important',
+        fontSize: '5rem !important',
         marginBottom: 2,
-        marginTop: "300px",
-        '@media (min-width:600px)': {
-            fontSize: '5rem'
+        marginTop: "350px !important",
+        '@media (max-width:600px)': {
+            fontSize: '3.5rem !important',
+            marginTop: "250px !important"
         },
         whiteSpace: 'normal',
         overflowWrap: 'break-word'
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
         marginBottom: 2,
         color: 'white !important',
         borderColor: 'white',
-        borderRadius: 20,
+        borderRadius: '20px !important',
         '&:hover': {
             backgroundColor: '#1976d2 !important'
         }
