@@ -47,7 +47,7 @@ export const CustomCard = (props) => {
                 image={imageUrl}
                 alt={title}
             />
-            <Typography variant="h4" className={classes.title}>{title}</Typography>
+            <Typography variant="h5" className={classes.title}>{title}</Typography>
             <CardContent className={classes.cardContent}>
                 <Typography color="text.secondary">
                     {description}

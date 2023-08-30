@@ -151,6 +151,8 @@ export const Home = () => {
                     </div>
                 ))}
             </Carousel>
+            {/* Services title */}
+            <Typography variant='h3' >{"Services"}</Typography>
             <div className={classes.container}>
                 {services.map((service, index) => {
                     return (
