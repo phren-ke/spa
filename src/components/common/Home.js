@@ -91,7 +91,8 @@ const useStyles = makeStyles({
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(345px, 1fr))',
         gap: 5,
-        margin: 1
+        margin: 1,
+        marginBottom: "30px"
     },
     card: {
         maxWidth: 345,

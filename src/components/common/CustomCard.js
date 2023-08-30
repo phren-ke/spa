@@ -4,31 +4,36 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     card: {
-        margin: 2,
+        margin: '16px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        height: '100%'
+        height: '100%',
+        borderRadius: '8px'
     },
     media: {
-        height: 194,
+        height: '200px',
         width: '100%',
         objectFit: 'cover',
+        borderTopLeftRadius: '8px',
+        borderTopRightRadius: '8px'
     },
     cardContent: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        gap: 2
+        padding: '16px'
     },
     button: {
-        marginTop: 1
+        marginTop: '8px'
     },
     seeServiceButton: {
-        marginTop: 1,
+        marginTop: '8px',
         color: '#1976d2 !important'
+    },
+    title: {
+        fontWeight: 'bold',
+        margin: '0 0 16px 0',
+        fontSize: '20px'
     }
-})
+});
 
 export const CustomCard = (props) => {
     const { title, description, imageUrl } = props;
@@ -42,12 +47,13 @@ export const CustomCard = (props) => {
                 image={imageUrl}
                 alt={title}
             />
+            <Typography variant="h4" className={classes.title}>{title}</Typography>
             <CardContent className={classes.cardContent}>
-                <Typography variant="body2" color="text.secondary">
+                <Typography color="text.secondary">
                     {description}
                 </Typography>
-                <Button component={Link} to={`/service/${props.id}`} className={classes.seeServiceButton}>{`See Service >`}</Button>
-                <Button variant="outlined" className={classes.button}>{`Book Appointment Now`}</Button>
+                <Button component={Link} to={`/service/${props.id}`} className={classes.seeServiceButton}> {` See Service >`}</Button>
+                <Button variant="outlined" className={classes.button}> {`Book Appointment Now`}</Button>
             </CardContent>
         </Card>
     )
