@@ -14,6 +14,7 @@ import { Pricing } from './components/Pricing';
 import { Blog } from './components/Blog';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
+import Service from './components/pages/Service';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path={"/Products"} element={<Products />} />
             <Route path={"/Pricing"} element={<Pricing />} />
             <Route path={"/Blog"} element={<Blog />} />
+            <Route path={"/service/:serviceId"} element={<Service />} />
           </Routes>
           <Footer />
         </BrowserRouter>

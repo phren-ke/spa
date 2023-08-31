@@ -21,11 +21,12 @@ const useStyles = makeStyles({
     },
     heading: {
         color: 'white',
-        fontSize: '3.5rem !important',
+        fontSize: '5rem !important',
         marginBottom: 2,
-        marginTop: "300px",
-        '@media (min-width:600px)': {
-            fontSize: '5rem'
+        marginTop: "350px !important",
+        '@media (max-width:600px)': {
+            fontSize: '3.5rem !important',
+            marginTop: "250px !important"
         },
         whiteSpace: 'normal',
         overflowWrap: 'break-word'
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
         marginBottom: 2,
         color: 'white !important',
         borderColor: 'white',
-        borderRadius: 20,
+        borderRadius: '20px !important',
         '&:hover': {
             backgroundColor: '#1976d2 !important'
         }
@@ -90,7 +91,8 @@ const useStyles = makeStyles({
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(345px, 1fr))',
         gap: 5,
-        margin: 1
+        margin: 1,
+        marginBottom: "30px"
     },
     card: {
         maxWidth: 345,
@@ -149,6 +151,8 @@ export const Home = () => {
                     </div>
                 ))}
             </Carousel>
+            {/* Services title */}
+            <Typography variant='h3' >{"Services"}</Typography>
             <div className={classes.container}>
                 {services.map((service, index) => {
                     return (
