@@ -6,6 +6,7 @@ import { carousel } from '../utils/carousel';
 import spa_one from "../assets/spa-2.jpg";
 import { makeStyles } from '@mui/styles';
 import { Button, Grid, Typography, Box } from '@mui/material';
+import AboutUs from './AboutUs';
 
 const useStyles = makeStyles({
     heroSection: {
@@ -160,6 +161,7 @@ export const Home = () => {
                     )
                 })}
             </div>
+            <AboutUs/>
         </>
     )
 }
