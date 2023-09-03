@@ -8,13 +8,14 @@ const useStyles = makeStyles({
   about: {
       display:'flex',
       flexDirection: 'column',
-      mt:1,
+      marginTop:'16px',
   },
   paragraph:{
-    my:2,
-    color:'text.secondary',
+    marginTop:'16px',
+    marginBottom:'16px',
+    color:'rgba(0, 0, 0, 0.6)',
     textAlign:'center',
-    p:2
+    padding:'16px'
   }
 
 });
