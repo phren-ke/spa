@@ -24,10 +24,10 @@ const useStyles = makeStyles({
         color: 'white',
         fontSize: '5rem !important',
         marginBottom: 2,
-        marginTop: "350px !important",
+        marginTop: 150,
         '@media (max-width:600px)': {
             fontSize: '3.5rem !important',
-            marginTop: "250px !important"
+            marginTop: "200px !important"
         },
         whiteSpace: 'normal',
         overflowWrap: 'break-word'
@@ -161,7 +161,7 @@ export const Home = () => {
                     )
                 })}
             </div>
-            <AboutUs/>
+            <AboutUs />
         </>
     )
 }
