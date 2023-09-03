@@ -29,7 +29,9 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   avatar: {
-    backgroundColor: themeOptions.palette.primary.main,
+    "&.MuiAvatar-root": {
+      backgroundColor: themeOptions.palette.primary.main,
+    },
     marginBottom: "10px !important"
   },
   btnLogin: {
