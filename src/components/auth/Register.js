@@ -131,7 +131,7 @@ export const Register = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h5" gutterBottom>
-              Sign Up to Continue
+              Sign up to continue
             </Typography>
           </Grid>
           <Grid item xs={12}>
