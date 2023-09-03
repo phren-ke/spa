@@ -11,11 +11,12 @@ import { Account } from './components/Account';
 import { Dashboard } from './components/Dashboard';
 import { Products } from './components/Products';
 import { Pricing } from './components/Pricing';
-import  AboutUs  from './components/common/AboutUs';
+import AboutUs from './components/common/AboutUs';
 import { Blog } from './components/Blog';
 import { Provider } from 'react-redux';
 import store from './components/redux/store';
 import Service from './components/pages/Service';
+import ContactUs from './components/pages/ContactUs';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path={"/Pricing"} element={<Pricing />} />
             <Route path={"/About"} element={<AboutUs />} />
             <Route path={"/Blog"} element={<Blog />} />
+            <Route path={"/ContactUs"} element={<ContactUs />} />
             <Route path={"/service/:serviceId"} element={<Service />} />
           </Routes>
           <Footer />

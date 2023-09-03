@@ -21,7 +21,7 @@ const pages = [
     { page: "Products", url: "/Products", title: "Products" },
     { page: "Services", url: "/Pricing", title: "Services" },
     { page: "About us", url: "/About", title: "About us" },
-    { page: "Contact us", url: "/Blog", title: "Contact us" },
+    { page: "Contact us", url: "/ContactUs", title: "Contact us" },
     { page: "Login", url: "/Login", title: "Login" },
 ]
 const settings = [
