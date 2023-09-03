@@ -1,9 +1,12 @@
 import React from 'react';
+import { services } from '../utils/services';
+import { CustomCard } from './CustomCard';
+import Carousel from 'react-material-ui-carousel';
+import { carousel } from '../utils/carousel';
 import spa_one from "../assets/spa-2.jpg";
 import { makeStyles } from '@mui/styles';
 import { Button, Grid, Typography, Box } from '@mui/material';
-import Carousel from 'react-material-ui-carousel';
-import { carousel } from "../utils/carousel";
+import AboutUs from './AboutUs';
 
 const useStyles = makeStyles({
     heroSection: {
@@ -19,11 +22,12 @@ const useStyles = makeStyles({
     },
     heading: {
         color: 'white',
-        fontSize: '3.5rem !important',
+        fontSize: '5rem !important',
         marginBottom: 2,
-        marginTop: "300px",
-        '@media (min-width:600px)': {
-            fontSize: '5rem'
+        marginTop: "350px !important",
+        '@media (max-width:600px)': {
+            fontSize: '3.5rem !important',
+            marginTop: "250px !important"
         },
         whiteSpace: 'normal',
         overflowWrap: 'break-word'
@@ -32,7 +36,7 @@ const useStyles = makeStyles({
         marginBottom: 2,
         color: 'white !important',
         borderColor: 'white',
-        borderRadius: 20,
+        borderRadius: '20px !important',
         '&:hover': {
             backgroundColor: '#1976d2 !important'
         }
@@ -83,6 +87,28 @@ const useStyles = makeStyles({
     carouselButton: {
         marginTop: '5px',
         color: '#1976d2 !important'
+    },
+    container: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(345px, 1fr))',
+        gap: 5,
+        margin: 1,
+        marginBottom: "30px"
+    },
+    card: {
+        maxWidth: 345,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        height: '100%',
+        '@media (max-width: 600px)': {
+            maxWidth: '100% !important',
+        },
+    },
+    media: {
+        height: 194,
+        width: '100%',
+        objectFit: 'cover',
     }
 });
 
@@ -126,6 +152,16 @@ export const Home = () => {
                     </div>
                 ))}
             </Carousel>
+            {/* Services title */}
+            <Typography variant='h3' >{"Services"}</Typography>
+            <div className={classes.container}>
+                {services.map((service, index) => {
+                    return (
+                        <CustomCard key={index} {...service}></CustomCard>
+                    )
+                })}
+            </div>
+            <AboutUs />
         </>
     )
 }
