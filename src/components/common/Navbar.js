@@ -20,7 +20,7 @@ import { useEffect } from 'react';
 const pages = [
     { page: "Products", url: "/Products", title: "Products" },
     { page: "Services", url: "/Pricing", title: "Services" },
-    { page: "About us", url: "/Blog", title: "About us" },
+    { page: "About us", url: "/About", title: "About us" },
     { page: "Contact us", url: "/Blog", title: "Contact us" },
     { page: "Login", url: "/Login", title: "Login" },
 ]
