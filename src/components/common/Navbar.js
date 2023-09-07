@@ -19,7 +19,7 @@ import { useEffect } from 'react';
 
 const pages = [
     { page: "Products", url: "/Products", title: "Products" },
-    { page: "Services", url: "/Pricing", title: "Services" },
+    { page: "Services", url: "/Services", title: "Services" },
     { page: "About us", url: "/About", title: "About us" },
     { page: "Contact us", url: "/ContactUs", title: "Contact us" },
     { page: "Login", url: "/Login", title: "Login" },
@@ -139,7 +139,7 @@ function Navbar() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href=""
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -172,7 +172,7 @@ function Navbar() {
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                    <Avatar alt="Maina" src={img} />
+                                    <Avatar alt="Spa" src={img} />
                                 </IconButton>
                             </Tooltip>
                             <Menu

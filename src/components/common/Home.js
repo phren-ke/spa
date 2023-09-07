@@ -7,6 +7,7 @@ import spa_one from "../assets/spa-2.jpg";
 import { makeStyles } from '@mui/styles';
 import { Button, Grid, Typography, Box } from '@mui/material';
 import AboutUs from './AboutUs';
+import ContactUs from '../pages/ContactUs';
 
 const useStyles = makeStyles({
     heroSection: {
@@ -161,7 +162,7 @@ export const Home = () => {
                 ))}
             </Carousel>
             {/* Services title */}
-            <Typography variant='h3' >{"Services"}</Typography>
+            <Typography variant='h3' align="center">{"Services"}</Typography>
             <div className={classes.container}>
                 {services.map((service, index) => {
                     return (
@@ -170,6 +171,7 @@ export const Home = () => {
                 })}
             </div>
             <AboutUs />
+            <ContactUs />
         </>
     )
 }
