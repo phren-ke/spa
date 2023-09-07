@@ -14,20 +14,25 @@ const useStyles = makeStyles({
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: 6
+        padding: 6,
+        padding: '4% 6%'
     },
     heading: {
         color: 'white',
-        fontSize: '5rem !important',
+        fontSize: '4rem !important',
         marginBottom: 2,
-        marginTop: 150,
-        '@media (max-width:600px)': {
+        alignItems: "bottom",
+        '@media (max-width:900px)': {
             fontSize: '3.5rem !important',
-            marginTop: "200px !important"
+            marginTop: "75px !important"
+        },
+        '@media (max-width:600px)': {
+            fontSize: '2.5rem !important',
+            marginTop: "50px !important"
         },
         whiteSpace: 'normal',
         overflowWrap: 'break-word'
@@ -45,7 +50,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
-        width: '100%'
+        width: '100%',
+        '@media (max-width:600px)': {
+            flexDirection: 'column'
+        }
     },
     carouselItem: {
         position: 'relative',

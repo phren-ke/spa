@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 export const Footer = () => {
     const classes = useStyles();
     return (
-        <div className={classes.footer}>
+        <div className='footer'>
             <Box>
                 <Toolbar>
                     <Grid container direction="row" alignItems="center">

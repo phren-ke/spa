@@ -24,30 +24,34 @@ function App() {
       <div className="App">
         <BrowserRouter basename="/">
           <Navbar />
-          <Routes>
-            <Route path={"/"} element={<Home />} />
-            <Route
-              path="/Profile"
-              element={<PrivateRoute authenticated={true} component={Profile} />}
-            />
-            <Route
-              path="/Account"
-              element={<PrivateRoute authenticated={true} component={Account} />}
-            />
-            <Route
-              path="/Dashboard"
-              element={<PrivateRoute authenticated={true} component={Dashboard} />}
-            />
-            <Route path={"/Login"} element={<Login />} />
-            <Route path={"/Register"} element={<Register />} />
-            <Route path={"/Products"} element={<Products />} />
-            <Route path={"/Pricing"} element={<Pricing />} />
-            <Route path={"/About"} element={<AboutUs />} />
-            <Route path={"/Blog"} element={<Blog />} />
-            <Route path={"/ContactUs"} element={<ContactUs />} />
-            <Route path={"/service/:serviceId"} element={<Service />} />
-          </Routes>
-          <Footer />
+          <div className="content">
+            <Routes>
+              <Route path={"/"} element={<Home />} />
+              <Route
+                path="/Profile"
+                element={<PrivateRoute authenticated={true} component={Profile} />}
+              />
+              <Route
+                path="/Account"
+                element={<PrivateRoute authenticated={true} component={Account} />}
+              />
+              <Route
+                path="/Dashboard"
+                element={<PrivateRoute authenticated={true} component={Dashboard} />}
+              />
+              <Route path={"/Login"} element={<Login />} />
+              <Route path={"/Register"} element={<Register />} />
+              <Route path={"/Products"} element={<Products />} />
+              <Route path={"/Pricing"} element={<Pricing />} />
+              <Route path={"/About"} element={<AboutUs />} />
+              <Route path={"/Blog"} element={<Blog />} />
+              <Route path={"/ContactUs"} element={<ContactUs />} />
+              <Route path={"/service/:serviceId"} element={<Service />} />
+            </Routes>
+          </div>
+          <div className="footer">
+            <Footer />
+          </div>
         </BrowserRouter>
       </div>
     </Provider>
