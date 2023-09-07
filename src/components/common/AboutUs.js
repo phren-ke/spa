@@ -24,7 +24,7 @@ function AboutUs() {
   const classes = useStyles();
   return (
     <Box className={classes.about}>
-      <Typography variant='h3'>About Us</Typography>
+      <Typography variant='h3' align="center">About Us</Typography>
       <Typography className={classes.paragraph}>We blend the timeless art of massage, the precision of salon services,<br /> and the science of skin care to create an unforgettable oasis of beauty and relaxation.<br />
         Our expert therapists and stylists are dedicated to rejuvenating your body, refreshing your style, and restoring your skin's natural glow, <br />
         ensuring every visit leaves you feeling revitalized and confident.</Typography>
