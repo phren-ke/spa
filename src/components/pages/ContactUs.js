@@ -68,7 +68,7 @@ const ContactUs = () => {
 
     return (
         <>
-            <Typography variant='h3' align="center">Contact Us</Typography>
+            <Typography variant='h4' align="center">Contact Us</Typography>
             <div className={classes.container}>
                 <div className={classes.formContainer}>
                     <Hidden smDown>
@@ -76,7 +76,7 @@ const ContactUs = () => {
                             <Grid item sm={4}>
                                 <Card className={classes.infoCard}>
                                     <CardContent className={classes.cardContent}>
-                                        <Typography variant="h6">Address</Typography>
+                                        <Typography variant="h6" >Address</Typography>
                                         <Typography variant="body2">1234 Street Name, City, Country</Typography>
                                         <Typography variant="body2">Suite 100</Typography>
                                         <Typography variant="body2">ZIP Code: 12345</Typography>
@@ -90,10 +90,14 @@ const ContactUs = () => {
                                 <Card className={classes.infoCard}>
                                     <CardContent className={classes.cardContent}>
                                         <Typography variant="h6">Email</Typography>
-                                        <Typography variant="body2">info@yourwebsite.com</Typography>
-                                        <Typography variant="body2">support@yourwebsite.com</Typography>
                                         <Typography variant="body2">
-                                            For press inquiries: press@yourwebsite.com
+                                            <a href="mailto:info@phren.com" style={{ textDecoration: 'none', color: 'inherit' }}>info@phren.com</a>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            <a href="mailto:support@phren.com" style={{ textDecoration: 'none', color: 'inherit' }}>support@phren.com</a>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            For press inquiries: press@phren.com
                                         </Typography>
                                         <Typography variant="body2">
                                             Response time: Within 24 hours
@@ -105,10 +109,14 @@ const ContactUs = () => {
                                 <Card className={classes.infoCard}>
                                     <CardContent className={classes.cardContent}>
                                         <Typography variant="h6">Phone</Typography>
-                                        <Typography variant="body2">+123 456 7890</Typography>
-                                        <Typography variant="body2">Fax: +123 456 7891</Typography>
+                                        <Typography variant="body2" >
+                                            <a href="tel:+123 456 7890" style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us: +123 456 7890</a>
+                                        </Typography>
                                         <Typography variant="body2">
-                                            Customer Service: +123 456 7892
+                                            <a href="tel:+123 456 7891" style={{ textDecoration: 'none', color: 'inherit' }}>Fax: +123 456 7891</a>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            <a href="tel:+123 456 7892" style={{ textDecoration: 'none', color: 'inherit' }}> Customer Service: +123 456 7892</a>
                                         </Typography>
                                         <Typography variant="body2">
                                             Office Hours: Mon-Fri, 9am-5pm
@@ -124,8 +132,12 @@ const ContactUs = () => {
                                 <Card className={classes.infoCard}>
                                     <CardContent className={classes.cardContent}>
                                         <Typography variant="h6">Technical Support</Typography>
-                                        <Typography variant="body2">Help Line: +123 456 7893</Typography>
-                                        <Typography variant="body2">Email: support@yourwebsite.com</Typography>
+                                        <Typography variant="body2">
+                                            <a href="tel:+123 456 7893" style={{ textDecoration: 'none', color: 'inherit' }}> Help Line: +123 456 7893</a>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            <a href="mailto:support@phren.com" style={{ textDecoration: 'none', color: 'inherit' }}>Email: support@phren.com</a>
+                                        </Typography>
                                         <Typography variant="body2">Working Hours: Mon-Fri, 9am-6pm</Typography>
                                         <Typography variant="body2">We are here to assist you with any technical issues.</Typography>
                                     </CardContent>
@@ -135,8 +147,12 @@ const ContactUs = () => {
                                 <Card className={classes.infoCard}>
                                     <CardContent className={classes.cardContent}>
                                         <Typography variant="h6">Product Advice</Typography>
-                                        <Typography variant="body2">Consultation Line: +123 456 7894</Typography>
-                                        <Typography variant="body2">Email: advice@yourwebsite.com</Typography>
+                                        <Typography variant="body2">
+                                            <a href="tel:+123 456 7894" style={{ textDecoration: 'none', color: 'inherit' }}> Consultation Line: +123 456 7894</a>
+                                        </Typography>
+                                        <Typography variant="body2">
+                                            <a href="mailto:support@phren.com" style={{ textDecoration: 'none', color: 'inherit' }}>Email: advice@phren.com</a>
+                                        </Typography>
                                         <Typography variant="body2">Find the best products tailored to your needs.</Typography>
                                         <Typography variant="body2">Get expert advice and tips.</Typography>
                                     </CardContent>
@@ -147,7 +163,7 @@ const ContactUs = () => {
                                     <CardContent className={classes.cardContent}>
                                         <Typography variant="h6">Product Billing & Pricing</Typography>
                                         <Typography variant="body2">Billing Line: +123 456 7895</Typography>
-                                        <Typography variant="body2">Email: billing@yourwebsite.com</Typography>
+                                        <Typography variant="body2">Email: billing@phren.com</Typography>
                                         <Typography variant="body2">Inquiries: Mon-Fri, 9am-5pm</Typography>
                                         <Typography variant="body2">For all your billing and pricing queries.</Typography>
                                     </CardContent>
@@ -190,7 +206,7 @@ const ContactUs = () => {
                             </Grid>
                             <Grid item xs={12}>
                                 <Button variant="contained" color="primary" className={classes.button}>
-                                    Submit
+                                    {"Submit"}
                                 </Button>
                             </Grid>
                         </Grid>
